@@ -1,0 +1,46 @@
+@keyframes float-bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+body {
+    background: linear-gradient(135deg, #5a626b 0%, #73787e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-card {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border-radius: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #dddddd;
+    border-color: #e0e7ef;
+    transition: transform 0.5s ease;   
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.8s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s, height 0.4s;
+    animation: float-bob 2.2s ease-in-out infinite;
+    cursor: pointer;
+}
+.profile-card:hover {
+    transform: scale(2.05) translateY(-4px);
+    box-shadow: 0 16px 48px 0 rgba(31, 38, 135, 0.22);
+    transform: scale(2.60) rotate(10deg);
+    animation-play-state: paused;
+}
+#profile-card:hover {
+    background-color: #e4e9f0;
+    border-color: #1a7ae8;
+    transition: background-color 1.3s ease, border-color 1.0s ease;
+    transition: transform 1.3s, box-shadow 1.3s;
+}   
+#name {
+    font-family: 'Share Tech';
+    font-size:35px;
+}
+#role{
+    font-family: 'Share Tech';
+    font-size:35px;
+}
